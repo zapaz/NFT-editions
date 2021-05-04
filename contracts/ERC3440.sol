@@ -151,7 +151,8 @@ abstract contract ERC3440 is ERC721URIStorage {
     * which is much more gas efficient then comparing each byte individually.
     * Equality means that:
     *  - 'self.length == other.length'
-    */  - For 'n' in '[0, self.length)', 'self[n] == other[n]'
+    *  - For 'n' in '[0, self.length)', 'self[n] == other[n]'
+    */
     function equals(bytes memory self, bytes memory other) internal pure returns (bool equal) {
         if (self.length != other.length) {
             return false;
